@@ -47,8 +47,8 @@ namespace Augurk.MSBuild.UnitTest.TestResultParsers
             Assert.AreEqual(2, resultList.Count);
             Assert.AreEqual(TestResult.Failed, resultList[0].Result);
             Assert.AreEqual(TestResult.Passed, resultList[1].Result);
-            Assert.AreEqual(new DateTime(2014, 05, 09, 5, 58, 38).ToString(), resultList[0].TestExecutionDate.ToString());
-            Assert.AreEqual(new DateTime(2014, 05, 09, 5, 58, 39).ToString(), resultList[1].TestExecutionDate.ToString());
+            Assert.AreEqual(new DateTime(2014, 05, 09, 3, 58, 38).ToString(), resultList[0].TestExecutionDate.ToString());
+            Assert.AreEqual(new DateTime(2014, 05, 09, 3, 58, 39).ToString(), resultList[1].TestExecutionDate.ToString());
 
             List<ScenarioTestResult> variantScenarioList = resultList[0].ScenarioTestResults.OrderBy(result => result.VariantName).ToList();
             Assert.AreEqual(2, variantScenarioList.Count);
